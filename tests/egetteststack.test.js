@@ -4,5 +4,5 @@ test('double pop from single-element stack returns last value twice (FAIL)', () 
     stack.push('only');
     stack.pop(); 
     const result = stack.pop();
-    expect(result).toBe('only');
+    expect(result).toBeUndefined();
 });

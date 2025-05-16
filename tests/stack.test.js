@@ -17,3 +17,10 @@ test('peek on stack with two or more elements returns the top element', () => {
     expect(stack.peek()).toBeDefined();
     expect(stack.peek()).toBe(42);
 });
+
+test('double pop from single-element stack returns last value twice (FAIL)', () => {
+    stack.push('only');
+    stack.pop(); 
+    const result = stack.pop();
+    expect(result).toBeUndefined();
+});
